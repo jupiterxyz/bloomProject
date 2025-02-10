@@ -1,7 +1,5 @@
 # bloomProject
-_
-bloomProject
-_
+
 ## description
 This is a web-based system that will support users who value creativity in tracking their workouts through photography and videography; 
 and participating in upcoming fitness-related trends, activities, competitions, challenges, and races whether in person, virtually, locally, or globally. 
