@@ -30,7 +30,7 @@ jobs:
     - name: Build with Maven
       run: |
         echo TESTING JUnit Sample Project
-        cd 'bloomProject/code/bloomProject/bloomProject'
+        cd 'bloomProject/bloomProject/code/bloomProject/bloomProject'
         mvn --batch-mode --update-snapshots clean verify
         cd ../..
 
