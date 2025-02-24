@@ -31,7 +31,7 @@ jobs:
       run: |
         echo TESTING JUnit Sample Project
         cd code/bloomProject
-        mvn --batch-mode --update-snapshots clean verify
+        mvn --batch-mode --update-snapshots clean verify 
         cd ../..
        
 
