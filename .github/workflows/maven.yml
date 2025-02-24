@@ -29,8 +29,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: |
-        echo TESTING JUnit Sample Project
-        cd bloomProject/code/bloomProject
+        echo "TESTING JUnit Sample Project"
+        cd code/bloomProject
         mvn --batch-mode --update-snapshots clean verify
         cd ../..
 
