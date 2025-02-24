@@ -15,7 +15,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  VERIFY:
+  verify:
 
     runs-on: ubuntu-latest
 
