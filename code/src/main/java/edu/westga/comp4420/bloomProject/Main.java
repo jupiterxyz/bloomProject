@@ -1,4 +1,5 @@
-package edu.westga.comp4420.javafx_sample;
+package edu.westga.comp4420.bloomProject
+;
 
 import java.io.IOException;
 
@@ -15,7 +16,7 @@ import javafx.scene.Scene;
  * @version Spring 2024
  */
 public class Main extends Application {
-	public static final String WINDOW_TITLE = "JavaFX Sample";
+	public static final String WINDOW_TITLE = "bloomProject";
 	public static final String GUI_RESOURCE = "view/codebehind/MainWindow.fxml";
 
 	/**
