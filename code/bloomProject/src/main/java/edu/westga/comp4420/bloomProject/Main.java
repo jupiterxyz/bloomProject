@@ -15,7 +15,7 @@ import javafx.scene.Scene;
  * @version Spring 2024
  */
 public class Main extends Application {
-	public static final String WINDOW_TITLE = "bloomProject";
+	public static final String WINDOW_TITLE = "bloomProject Dashboard";
 	public static final String GUI_RESOURCE = "view/codebehind/MainWindow.fxml";
 	public static final String TRACKWORKOUTS_TITLE = "bloomProject Track Fitness";
 	public static final String TRACKWORKOUTS_RESOURCE = "view/codebehind/TrackWorkoutsWindow.fxml";

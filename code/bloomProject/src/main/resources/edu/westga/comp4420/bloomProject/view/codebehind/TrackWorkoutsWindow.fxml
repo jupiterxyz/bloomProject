@@ -15,7 +15,7 @@
       <Button fx:id="uploadButton" layoutX="79.0" layoutY="85.0" mnemonicParsing="false" text="Upload Photos/Videos" />
       <Button fx:id="viewGalleryButton" layoutX="105.0" layoutY="127.0" mnemonicParsing="false" text="View Gallery" />
       <Button fx:id="addStatistticsButton" layoutX="78.0" layoutY="167.0" mnemonicParsing="false" text="Add Workout Statistics" />
-      <Button fx:id="backButtonn" layoutX="146.0" layoutY="282.0" mnemonicParsing="false" text="Back to Dashboard" />
+      <Button fx:id="backButton" layoutX="146.0" layoutY="282.0" mnemonicParsing="false" text="Back to Dashboard" />
       <Button fx:id="mealTrackerButton" layoutX="104.0" layoutY="211.0" mnemonicParsing="false" text="Meal Tracker" />
    </children>
 </AnchorPane>

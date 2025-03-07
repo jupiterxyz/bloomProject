@@ -55,7 +55,7 @@ public class MainWindow {
 				addTaskStage.initModality(Modality.APPLICATION_MODAL);
 				addTaskStage.showAndWait();
 			} catch (IOException e) {
-				Alert alert = new Alert(Alert.AlertType.ERROR);
+				Alert alert = new Alert(AlertType.ERROR);
 				alert.setContentText("Unable to launch Track Workouts Window");
 				alert.showAndWait();
 			}
