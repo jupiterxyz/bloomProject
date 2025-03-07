@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane minHeight="99.0" minWidth="160.0" prefHeight="334.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.comp4420.bloomProject.view.codebehind.MainWindow">
    <children>
       <Label layoutX="40.0" layoutY="24.0" text="bloomProject Dashboard">
@@ -13,9 +12,10 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="96.0" layoutY="79.0" mnemonicParsing="false" text="Track Workouts" />
-      <Button layoutX="89.0" layoutY="119.0" mnemonicParsing="false" text="Trending Activities" />
-      <Button layoutX="87.0" layoutY="155.0" mnemonicParsing="false" text="Fittness Challenges" />
-      <Button layoutX="63.0" layoutY="190.0" mnemonicParsing="false" text="Lets Talk: Community Forum" />
+      <Button fx:id="trackFitnessButton" layoutX="104.0" layoutY="79.0" mnemonicParsing="false" text="Track Fitness" />
+      <Button fx:id="trendingActivitiesButton" layoutX="89.0" layoutY="119.0" mnemonicParsing="false" text="Trending Activities" />
+      <Button fx:id="fitnessChallengesButton" layoutX="87.0" layoutY="155.0" mnemonicParsing="false" text="Fitness Challenges" />
+      <Button fx:id="communityForumButton" layoutX="63.0" layoutY="231.0" mnemonicParsing="false" text="Lets Talk: Community Forum" />
+      <Button fx:id="stealthModeButton" layoutX="102.0" layoutY="191.0" mnemonicParsing="false" text="Stealth Mode" />
    </children>
 </AnchorPane>
