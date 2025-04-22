@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="99.0" minWidth="160.0" prefHeight="334.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.comp4420.bloomProject.view.codebehind.TrackWorkoutsWindow">
+   <children>
+      <Label layoutX="43.0" layoutY="34.0" text="bloomProject Meal Tracker">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="viewGalleryButton" layoutX="105.0" layoutY="127.0" mnemonicParsing="false" text="Track Meals" />
+      <Button fx:id="addStatistticsButton" layoutX="105.0" layoutY="167.0" mnemonicParsing="false" text="Meal History" />
+      <Button fx:id="backButton" layoutX="124.0" layoutY="279.0" mnemonicParsing="false" text="Back to Track Fitness" />
+   </children>
+</AnchorPane>
