@@ -8,12 +8,12 @@
 
 <AnchorPane minHeight="99.0" minWidth="160.0" prefHeight="334.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.comp4420.bloomProject.view.codebehind.TrackWorkoutsWindow">
    <children>
-      <Label layoutX="46.0" layoutY="27.0" text="bloomProject Meal History">
+      <Label fx:id="mealHistoryTitle" layoutX="46.0" layoutY="27.0" text="bloomProject Meal History">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="backMealTrackrtButton" layoutX="134.0" layoutY="282.0" mnemonicParsing="false" text="Back to Meal Tracker" />
+      <Button fx:id="backMealTrackerButton" layoutX="134.0" layoutY="282.0" mnemonicParsing="false" text="Back to Meal Tracker" />
       <Button fx:id="submitMealButton" layoutX="25.0" layoutY="282.0" mnemonicParsing="false" text="Submit Meal" />
       <ListView fx:id="mealHistoryList" layoutX="32.0" layoutY="174.0" prefHeight="77.0" prefWidth="226.0" style="-fx-border-color: black;" />
       <Label fx:id="displayMealStatistics" layoutX="39.0" layoutY="73.0" prefHeight="84.0" prefWidth="213.0" style="-fx-border-color: black; -fx-border-image-width: 2;" />
