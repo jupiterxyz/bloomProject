@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.SubScene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane minHeight="99.0" minWidth="160.0" prefHeight="334.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.comp4420.bloomProject.view.codebehind.TrackWorkoutsWindow">
@@ -17,11 +15,7 @@
       </Label>
       <Button fx:id="backMealTrackrtButton" layoutX="134.0" layoutY="282.0" mnemonicParsing="false" text="Back to Meal Tracker" />
       <Button fx:id="submitMealButton" layoutX="25.0" layoutY="282.0" mnemonicParsing="false" text="Submit Meal" />
-      <SubScene fill="#d71313" height="126.0" layoutX="25.0" layoutY="50.0" width="241.0">
-        <root>
-          <Region />
-        </root>
-      </SubScene>
-      <ListView layoutX="32.0" layoutY="190.0" prefHeight="77.0" prefWidth="226.0" />
+      <ListView layoutX="32.0" layoutY="174.0" prefHeight="77.0" prefWidth="226.0" style="-fx-border-color: black;" />
+      <Label layoutX="39.0" layoutY="73.0" prefHeight="84.0" prefWidth="213.0" style="-fx-border-color: black; -fx-border-image-width: 2;" />
    </children>
 </AnchorPane>
