@@ -19,6 +19,11 @@ public class Main extends Application {
 	public static final String GUI_RESOURCE = "view/codebehind/MainWindow.fxml";
 	public static final String TRACKWORKOUTS_TITLE = "bloomProject Track Fitness";
 	public static final String TRACKWORKOUTS_RESOURCE = "view/codebehind/TrackWorkoutsWindow.fxml";
+	public static final String MEAL_TRACKER = "view/codebehind/MealTrackerWindow.fxml";
+	public static final String MEAL_TRACKER_TITLE = "bloomProject Meal Tracker";
+	public static final String ADD_MEAL_WINDOW = "view/codebehind/AddMealWindow.fxml";
+    public static final String ADD_MEAL_WINDOW_TITLE = "bloomProject Add Meal";
+
 
 	/**
 	 * JavaFX entry point.

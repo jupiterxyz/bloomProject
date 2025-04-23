@@ -12,8 +12,8 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="viewGalleryButton" layoutX="105.0" layoutY="127.0" mnemonicParsing="false" text="Track Meals" />
-      <Button fx:id="addStatistticsButton" layoutX="105.0" layoutY="167.0" mnemonicParsing="false" text="Meal History" />
-      <Button fx:id="backButton" layoutX="124.0" layoutY="279.0" mnemonicParsing="false" text="Back to Track Fitness" />
+      <Button fx:id="addMealPageButton" layoutX="105.0" layoutY="127.0" mnemonicParsing="false" text="Track Meals" />
+      <Button fx:id="addStatistticsPageButton" layoutX="105.0" layoutY="167.0" mnemonicParsing="false" text="Meal History" />
+      <Button fx:id="backtoTrackFitnessButton" layoutX="124.0" layoutY="279.0" mnemonicParsing="false" text="Back to Track Fitness" />
    </children>
 </AnchorPane>

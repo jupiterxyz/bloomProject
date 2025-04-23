@@ -8,7 +8,7 @@
 
 <AnchorPane minHeight="99.0" minWidth="160.0" prefHeight="334.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.comp4420.bloomProject.view.codebehind.TrackWorkoutsWindow">
    <children>
-      <Label fx:id="mealHistoryTitle" layoutX="46.0" layoutY="27.0" text="bloomProject Meal History">
+      <Label layoutX="46.0" layoutY="27.0" text="bloomProject Meal History">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
