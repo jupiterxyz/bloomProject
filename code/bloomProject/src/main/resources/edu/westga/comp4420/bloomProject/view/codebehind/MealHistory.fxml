@@ -15,7 +15,7 @@
       </Label>
       <Button fx:id="backMealTrackrtButton" layoutX="134.0" layoutY="282.0" mnemonicParsing="false" text="Back to Meal Tracker" />
       <Button fx:id="submitMealButton" layoutX="25.0" layoutY="282.0" mnemonicParsing="false" text="Submit Meal" />
-      <ListView layoutX="32.0" layoutY="174.0" prefHeight="77.0" prefWidth="226.0" style="-fx-border-color: black;" />
-      <Label layoutX="39.0" layoutY="73.0" prefHeight="84.0" prefWidth="213.0" style="-fx-border-color: black; -fx-border-image-width: 2;" />
+      <ListView fx:id="mealHistoryList" layoutX="32.0" layoutY="174.0" prefHeight="77.0" prefWidth="226.0" style="-fx-border-color: black;" />
+      <Label fx:id="displayMealStatistics" layoutX="39.0" layoutY="73.0" prefHeight="84.0" prefWidth="213.0" style="-fx-border-color: black; -fx-border-image-width: 2;" />
    </children>
 </AnchorPane>
