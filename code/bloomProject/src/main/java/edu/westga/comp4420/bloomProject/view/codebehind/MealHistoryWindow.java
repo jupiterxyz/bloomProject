@@ -49,7 +49,7 @@ public class MealHistoryWindow {
 				Parent parent = loader.load();
 				Scene scene = new Scene(parent);
 				Stage addTaskStage = new Stage();
-				addTaskStage.setTitle(Main.ADD_MEAL_HISTORY_WINDOW_TITLE);
+				addTaskStage.setTitle(Main.MEAL_HISTORY_WINDOW_TITLE);
 				addTaskStage.setScene(scene);
 				addTaskStage.initModality(Modality.APPLICATION_MODAL);
 				addTaskStage.showAndWait();
