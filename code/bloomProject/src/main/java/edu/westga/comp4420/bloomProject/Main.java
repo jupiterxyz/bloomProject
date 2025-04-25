@@ -23,6 +23,8 @@ public class Main extends Application {
 	public static final String MEAL_TRACKER_TITLE = "bloomProject Meal Tracker";
 	public static final String ADD_MEAL_WINDOW = "view/codebehind/AddMealWindow.fxml";
     public static final String ADD_MEAL_WINDOW_TITLE = "bloomProject Add Meal";
+	public static final String MealHistoryWindow = "view/codebehind/MealHistoryWindow.fxml";
+	public static final String MealHistoryWindow_TITLE = "bloomProject Meal History";
 
 
 	/**
