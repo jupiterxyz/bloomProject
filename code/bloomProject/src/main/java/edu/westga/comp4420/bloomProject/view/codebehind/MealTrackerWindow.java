@@ -68,7 +68,7 @@ public class MealTrackerWindow {
 			}
 		});
 	}
-		private void addStatistticsPageButtonHelper() {
+	private void addStatistticsPageButtonHelper() {
 			this.addStatistticsPageButton.setOnAction(event -> {
 				try {
 					FXMLLoader loader = new FXMLLoader();
@@ -84,6 +84,7 @@ public class MealTrackerWindow {
 					Alert alert = new Alert(Alert.AlertType.ERROR);
 					alert.setContentText("Unable to launch Add Meal Window");
 					alert.showAndWait();
+					e.printStackTrace(); 
 				}
 			});
 
