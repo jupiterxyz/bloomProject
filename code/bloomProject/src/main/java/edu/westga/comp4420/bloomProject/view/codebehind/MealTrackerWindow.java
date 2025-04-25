@@ -69,8 +69,8 @@ public class MealTrackerWindow {
 		});
 	}
 	private void addStatistticsPageButtonHelper() {
-			this.addStatistticsPageButton.setOnAction(event -> {
-				try {
+		this.addStatistticsPageButton.setOnAction(event -> {
+			try {
 					FXMLLoader loader = new FXMLLoader();
 					loader.setLocation(Main.class.getResource(Main.MEAL_HISTORY_WINDOW));
 					Parent parent = loader.load();
@@ -80,17 +80,14 @@ public class MealTrackerWindow {
 					addTaskStage.setScene(scene);
 					addTaskStage.initModality(Modality.APPLICATION_MODAL);
 					addTaskStage.showAndWait();
-				} catch (IOException e) {
+			} catch (IOException e) {
 					Alert alert = new Alert(Alert.AlertType.ERROR);
 					alert.setContentText("Unable to launch Add Meal Window");
 					alert.showAndWait();
 					e.printStackTrace(); 
-				}
-			});
-
-		}
-
-
+			}
+		});
+	}
 }
 	
 
