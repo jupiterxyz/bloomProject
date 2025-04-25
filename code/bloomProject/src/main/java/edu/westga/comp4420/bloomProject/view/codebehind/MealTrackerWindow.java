@@ -68,7 +68,7 @@ public class MealTrackerWindow {
 			}
 		});
 	}
-		private void addStatistticsPageButtonHelper () {
+		private void addStatistticsPageButtonHelper() {
 			this.addStatistticsPageButton.setOnAction(event -> {
 				try {
 					FXMLLoader loader = new FXMLLoader();
