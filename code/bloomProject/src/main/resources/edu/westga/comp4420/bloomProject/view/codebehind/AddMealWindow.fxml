@@ -14,7 +14,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="backMealTrackrtButton" layoutX="134.0" layoutY="282.0" mnemonicParsing="false" text="Back to Meal Tracker" />
+      <Button fx:id="backMealTrackerButton" layoutX="134.0" layoutY="282.0" mnemonicParsing="false" text="Back to Meal Tracker" />
       <TextField fx:id="nameTextArea" layoutX="97.0" layoutY="74.0" prefHeight="26.0" prefWidth="169.0" promptText="Input Name of Food" />
       <TextField fx:id="proteinTextArea" layoutX="97.0" layoutY="109.0" prefHeight="26.0" prefWidth="169.0" promptText="Input total number of Protiens" />
       <TextField fx:id="fatTextArea" layoutX="97.0" layoutY="147.0" prefHeight="26.0" prefWidth="169.0" promptText="Input total number of  Fats" />
