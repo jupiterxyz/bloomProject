@@ -1,7 +1,6 @@
 package edu.westga.comp4420.bloomProject.view.codebehind;
 
 import javafx.scene.control.Alert;
-import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.Node;
