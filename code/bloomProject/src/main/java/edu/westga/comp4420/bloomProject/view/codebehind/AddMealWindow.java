@@ -159,6 +159,7 @@ public class AddMealWindow {
 				
 				Alert confrimation = new Alert(Alert.AlertType.INFORMATION);
 				confrimation.setTitle("Meal Submitted");
+				confrimation.setHeaderText(null);
 				confrimation.setContentText("You have successfully submitted your meal");
 				alert.showAndWait();
 				
