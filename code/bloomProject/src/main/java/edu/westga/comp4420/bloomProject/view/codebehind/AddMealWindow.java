@@ -157,6 +157,11 @@ public class AddMealWindow {
 				MealStorage storage = new MealStorage();
 				storage.addMeal(newMeal);
 				
+				Alert confrimation = new Alert(Alert.AlertType.INFORMATION);
+				confrimation.setTitle("Meal Submitted");
+				confrimation.setContentText("You have successfully submitted your meal");
+				alert.showAndWait();
+				
 				((Node) (event.getSource())).getScene().getWindow().hide();
 			} catch (Exception e) {
 				Alert alert = new Alert(Alert.AlertType.ERROR);
