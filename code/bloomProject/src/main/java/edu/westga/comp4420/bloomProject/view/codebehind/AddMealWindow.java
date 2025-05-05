@@ -57,32 +57,38 @@ public class AddMealWindow {
 
     @FXML
     private Button submitMealButton;
+
+	public String getNameOfMeal() {
+		return this.nameTextArea.getText();
+	}
+
+	public void setNameOfMeal(String name){
+		this.nameTextArea.setText(name);
+	}
+
+	public int getCalories() {
+		return this.calorieTextArea.getText();
+	}
+
+	public void setCalories(int calories){
+		return this.calorieTextArea.setText(String.valueOf(calories));
+	}
 	
 	@FXML
     void initialize() {
 		this.labelNameFXID();
 
+		this.calorieTextArea.textProperty().addListener((observableValue, oldValue, newValue) -> {
+			if (!newValue.matches("\\d*")){
+				this.calorieTextArea.setText(newValue.replaceAll("[^\\d]",""));
+			}
+		});
+
     	this.backMealTrackerButton.setOnAction(event -> {
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		});
 
-		this.submitMealButton.setOnAction(event -> {
-			try {
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(Main.class.getResource(Main.ADD_MEAL_WINDOW));
-				Parent parent = loader.load();
-				Scene scene = new Scene(parent);
-				Stage addTaskStage = new Stage();
-				addTaskStage.setTitle(Main.ADD_MEAL_WINDOW_TITLE);
-				addTaskStage.setScene(scene);
-				addTaskStage.initModality(Modality.APPLICATION_MODAL);
-				addTaskStage.showAndWait();
-			} catch (IOException e) {
-				Alert alert = new Alert(Alert.AlertType.ERROR);
-				alert.setContentText("Unable to launch Add Meal Window");
-				alert.showAndWait();
-			}
-		});
+		this.submitMealButtonHelper();
 
 	}
 
@@ -101,8 +107,25 @@ public class AddMealWindow {
         assert this.submitMealButton != null : "fx:id=\"submitMealButton\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
 	}
 
-
-
+	private void submitMealButtonHelper() {
+		this.submitMealButton.setOnAction(event -> {
+			try {
+				FXMLLoader loader = new FXMLLoader();
+				loader.setLocation(Main.class.getResource(Main.ADD_MEAL_WINDOW));
+				Parent parent = loader.load();
+				Scene scene = new Scene(parent);
+				Stage addTaskStage = new Stage();
+				addTaskStage.setTitle(Main.ADD_MEAL_WINDOW_TITLE);
+				addTaskStage.setScene(scene);
+				addTaskStage.initModality(Modality.APPLICATION_MODAL);
+				addTaskStage.showAndWait();
+			} catch (IOException e) {
+				Alert alert = new Alert(Alert.AlertType.ERROR);
+				alert.setContentText("Unable to launch Add Meal Window");
+				alert.showAndWait();
+			}
+		});
+	}
 }
 	
 
