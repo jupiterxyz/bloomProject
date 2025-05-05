@@ -71,7 +71,7 @@ public class AddMealWindowTest {
 
     @Test
     public void testInvalidProteinInput() {
-        this.window.proteinTextArea.setText("apples");
+        this.window.protein.setText("apples");
         assertThrows(NumberFormatException.class, () -> this.window.getProtein());
     }
 
@@ -79,7 +79,7 @@ public class AddMealWindowTest {
     public void testEmptyProteinInput() {
 
 
-        this.window.proteinTextArea.setText("");
+        this.window.protein.setText("");
         assertThrows(NumberFormatException.class, () -> this.window.getProtein());
     }
 
@@ -103,13 +103,13 @@ public class AddMealWindowTest {
 
     @Test
     public void testInvalidFatsInput() {
-        this.window.fatTextArea.setText("apples");
+        this.window.fat.setText("apples");
         assertThrows(NumberFormatException.class, () -> this.window.getFats());
     }
 
     @Test
     public void testEmptyFatsInput() {
-        this.window.fatTextArea.setText("");
+        this.window.fat.setText("");
         assertThrows(NumberFormatException.class, () -> this.window.getFats());
     }
 
@@ -133,13 +133,13 @@ public class AddMealWindowTest {
 
     @Test
     public void testInvalidCarbsInput() {
-        this.window.carbTextArea.setText("apples");
+        this.window.carb.setText("apples");
         assertThrows(NumberFormatException.class, () -> this.window.getCarbs());
     }
 
     @Test
     public void testEmptyCarbsInput() {
-        this.window.carbTextArea.setText("");
+        this.window.carb.setText("");
         assertThrows(NumberFormatException.class, () -> this.window.getCarbs());
     }
 
@@ -163,13 +163,13 @@ public class AddMealWindowTest {
 
     @Test
     public void testInvalidCaloriesInput() {
-        this.window.calorieTextArea.setText("carrots");
+        this.window.calorie.setText("carrots");
         assertThrows(NumberFormatException.class, () -> this.window.getCalories());
     }
 
     @Test
     public void testEmptyCaloriesInput() {
-        this.window.calorieTextArea.setText("");
+        this.window.calorie.setText("");
         assertThrows(NumberFormatException.class, () -> this.window.getCalories());
     }
 
