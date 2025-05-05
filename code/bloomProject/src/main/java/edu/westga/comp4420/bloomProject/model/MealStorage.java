@@ -16,11 +16,11 @@ public class MealStorage {
 		this.meals = new ArrayList<>();
 	}
 
-	public void addMeal(Meal meal){
+	public void addMeal(Meal meal) {
 		this.meals.add(meal);
 	}
 
-	public List<Meal> getAllMeals(){
+	public List<Meal> getAllMeals() {
 		return this.meals;
 	}
 
