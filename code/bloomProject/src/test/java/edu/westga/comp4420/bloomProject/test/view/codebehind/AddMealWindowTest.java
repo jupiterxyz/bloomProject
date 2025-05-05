@@ -1,109 +1,182 @@
 package edu.westga.comp4420.bloomProject.view.codebehind;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.stage.Modality;
-import javafx.scene.control.Alert;
-import java.io.IOException;
-import edu.westga.comp4420.bloomProject.Main;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.Node;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import javafx.embed.swing.JFXPanel;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 
 /**
- * CodeBehind To Handle Processing for the AddMealWindow
+ * Unit Test for AddMealWindow
  *
- * @author	Comp 4420
+ * @author Comp 4420
  * @version Spring 2024
  */
 
-public class AddMealWindow {
-    @FXML
-    private Button backMealTrackerButton;
+public class AddMealWindowTest {
 
-    @FXML
-    private Text calorieLabel;
+    private AddMealWindow window;
 
-    @FXML
-    private TextField calorieTextArea;
+    @BeforeEach
+    public void setUp() {
+        new JFXPanel(); // Initializes JavaFX toolkit
 
-    @FXML
-    private Text carbLabel;
+        this.window = new AddMealWindow();
 
-    @FXML
-    private TextField carbTextArea;
+        this.window.nameTextArea = new TextField();
+        this.window.proteinTextArea = new TextField();
+        this.window.fatTextArea = new TextField();
+        this.window.carbTextArea = new TextField();
+        this.window.calorieTextArea = new TextField();
+    }
 
-    @FXML
-    private Text fatLabel;
+    // Name tests
+    @Test
+    public void testValidNameOfMeal() {
+        this.window.setNameOfMeal("Salad");
+        assertEquals("Salad", this.window.getNameOfMeal());
+    }
 
-    @FXML
-    private TextField fatTextArea;
+    @Test
+    public void testEmptyNameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            this.window.setNameOfMeal("");
+        });
+    }
 
-    @FXML
-    private Text nameLabel;
+    @Test
+    public void testNullNameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            this.window.setNameOfMeal(null);
+        });
+    }
 
-    @FXML
-    private TextField nameTextArea;
+    @Test
+    public void testWhitespaceNameThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            this.window.setNameOfMeal("   ");
+        });
+    }
 
-    @FXML
-    private Text proteinLabel;
+    // Protein tests
+    @Test
+    public void testValidProteinEntry() {
+        this.window.setProtein(30);
+        assertEquals(30, this.window.getProtein());
+    }
 
-    @FXML
-    private TextField proteinTextArea;
+    @Test
+    public void testInvalidProteinInputThrowsException() {
+        this.window.proteinTextArea.setText("apples");
+        assertThrows(NumberFormatException.class, () -> this.window.getProtein());
+    }
 
-    @FXML
-    private Button submitMealButton;
-	
-	@FXML
-    void initialize() {
-		this.labelNameFXID();
+    @Test
+    public void testEmptyProteinInputThrowsException() {
+        this.window.proteinTextArea.setText("");
+        assertThrows(NumberFormatException.class, () -> this.window.getProtein());
+    }
 
-    	this.backMealTrackerButton.setOnAction(event -> {
-			((Node) (event.getSource())).getScene().getWindow().hide();
-		});
+    @Test
+    public void testNegativeProteinThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> this.window.setProtein(-1));
+    }
 
-		this.submitMealButton.setOnAction(event -> {
-			try {
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(Main.class.getResource(Main.ADD_MEAL_WINDOW));
-				Parent parent = loader.load();
-				Scene scene = new Scene(parent);
-				Stage addTaskStage = new Stage();
-				addTaskStage.setTitle(Main.ADD_MEAL_WINDOW_TITLE);
-				addTaskStage.setScene(scene);
-				addTaskStage.initModality(Modality.APPLICATION_MODAL);
-				addTaskStage.showAndWait();
-			} catch (IOException e) {
-				Alert alert = new Alert(Alert.AlertType.ERROR);
-				alert.setContentText("Unable to launch Add Meal Window");
-				alert.showAndWait();
-			}
-		});
+    @Test
+    public void testZeroProteinAccepted() {
+        this.window.setProtein(0);
+        assertEquals(0, this.window.getProtein());
+    }
 
-	}
+    // Fats tests
+    @Test
+    public void testValidFatsEntry() {
+        this.window.setFats(30);
+        assertEquals(30, this.window.getFats());
+    }
 
-	private void labelNameFXID() {
-		assert this.backMealTrackerButton != null : "fx:id=\"backMealTrackrtButton\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.calorieLabel != null : "fx:id=\"calorieLabel\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.calorieTextArea != null : "fx:id=\"calorieTextArea\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.carbLabel != null : "fx:id=\"carbLabel\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.carbTextArea != null : "fx:id=\"carbTextArea\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.fatLabel != null : "fx:id=\"fatLabel\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.fatTextArea != null : "fx:id=\"fatTextArea\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.nameLabel != null : "fx:id=\"nameLabel\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.nameTextArea != null : "fx:id=\"nameTextArea\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.proteinLabel != null : "fx:id=\"proteinLabel\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.proteinTextArea != null : "fx:id=\"proteinTextArea\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-        assert this.submitMealButton != null : "fx:id=\"submitMealButton\" was not injected: check your FXML file 'AddMealWindow.fxml'.";
-	}
+    @Test
+    public void testInvalidFatsInputThrowsException() {
+        this.window.fatTextArea.setText("apples");
+        assertThrows(NumberFormatException.class, () -> this.window.getFats());
+    }
 
+    @Test
+    public void testEmptyFatsInputThrowsException() {
+        this.window.fatTextArea.setText("");
+        assertThrows(NumberFormatException.class, () -> this.window.getFats());
+    }
 
+    @Test
+    public void testNegativeFatsThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> this.window.setFats(-1));
+    }
 
+    @Test
+    public void testZeroFatsAccepted() {
+        this.window.setFats(0);
+        assertEquals(0, this.window.getFats());
+    }
+
+    // Carbs tests
+    @Test
+    public void testValidCarbsEntry() {
+        this.window.setCarbs(30);
+        assertEquals(30, this.window.getCarbs());
+    }
+
+    @Test
+    public void testInvalidCarbsInputThrowsException() {
+        this.window.carbTextArea.setText("apples");
+        assertThrows(NumberFormatException.class, () -> this.window.getCarbs());
+    }
+
+    @Test
+    public void testEmptyCarbsInputThrowsException() {
+        this.window.carbTextArea.setText("");
+        assertThrows(NumberFormatException.class, () -> this.window.getCarbs());
+    }
+
+    @Test
+    public void testNegativeCarbsThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> this.window.setCarbs(-1));
+    }
+
+    @Test
+    public void testZeroCarbsAccepted() {
+        this.window.setCarbs(0);
+        assertEquals(0, this.window.getCarbs());
+    }
+
+    // Calories tests
+    @Test
+    public void testValidCaloriesEntry() {
+        this.window.setCalories(30);
+        assertEquals(30, this.window.getCalories());
+    }
+
+    @Test
+    public void testInvalidCaloriesInputThrowsException() {
+        this.window.calorieTextArea.setText("apples");
+        assertThrows(NumberFormatException.class, () -> this.window.getCalories());
+    }
+
+    @Test
+    public void testEmptyCaloriesInputThrowsException() {
+        this.window.calorieTextArea.setText("");
+        assertThrows(NumberFormatException.class, () -> this.window.getCalories());
+    }
+
+    @Test
+    public void testNegativeCaloriesThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> this.window.setCalories(-1));
+    }
+
+    @Test
+    public void testZeroCaloriesAccepted() {
+        this.window.setCalories(0);
+        assertEquals(0, this.window.getCalories());
+    }
 }
-	
-
-
