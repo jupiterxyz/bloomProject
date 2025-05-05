@@ -67,11 +67,11 @@ public class AddMealWindow {
 	}
 
 	public int getCalories() {
-		return this.calorieTextArea.getText();
+		return Interger.parseInt(this.calorieTextArea.getText());
 	}
 
 	public void setCalories(int calories) {
-		return this.calorieTextArea.setText(String.valueOf(calories));
+		this.calorieTextArea.setText(String.valueOf(calories));
 	}
 	
 	@FXML
