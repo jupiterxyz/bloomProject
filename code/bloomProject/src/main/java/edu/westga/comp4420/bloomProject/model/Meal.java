@@ -22,7 +22,7 @@ public class Meal {
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -30,7 +30,7 @@ public class Meal {
 	}
 
 	public int getProtein() {
-		return protein;
+		return this.protein;
 	}
 
 	public void setProtein(int protein) {
@@ -38,7 +38,7 @@ public class Meal {
 	}
 
 	public int getFats() {
-		return fats;
+		return this.fats;
 	}
 
 	public void setFats(int fats) {
@@ -46,7 +46,7 @@ public class Meal {
 	}
 
 	public int getCarbs() {
-		return carbs;
+		return this.carbs;
 	}
 
 	public void setCarbs(int carbs) {
@@ -54,7 +54,7 @@ public class Meal {
 	}
 
 	public int getCalories() {
-		return calories;
+		return this.calories;
 	}
 
 	public void setCalories(int calories) {
