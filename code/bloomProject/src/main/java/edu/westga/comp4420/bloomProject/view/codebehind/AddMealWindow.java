@@ -159,7 +159,7 @@ public class AddMealWindow {
 				storage.addMeal(newMeal);
 				
 				((Node) (event.getSource())).getScene().getWindow().hide();
-			} catch (IOException e) {
+			} catch (Exception e) {
 				Alert alert = new Alert(Alert.AlertType.ERROR);
 				alert.setContentText("Fill out all fields. Name is letter input and input valid numbers only for protein, fats, carbs, calories");
 				alert.showAndWait();
