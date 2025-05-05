@@ -63,7 +63,7 @@ public class Meal {
 
 	@Override
 	public String toString() {
-		return this.name  + " Protein: " + this.protein + "g" + " Fats: " + this.fats + "g" + " Carbs: " + this.carbs + "g" + " Calories: " + this.calories + "g";
+		return this.name  + " Protein: " + this.protein + " grams" + " Fats: " + this.fats + " grams" + " Carbs: " + this.carbs + " grams" + " Calories: " + this.calories + " grams";
 	}
 
 }
