@@ -1,13 +1,7 @@
 package edu.westga.comp4420.bloomProject.view.codebehind;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.stage.Modality;
 import javafx.scene.control.Alert;
 import java.io.IOException;
-import edu.westga.comp4420.bloomProject.Main;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.Node;
