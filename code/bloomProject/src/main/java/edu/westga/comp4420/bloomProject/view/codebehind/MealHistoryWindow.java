@@ -30,34 +30,17 @@ public class MealHistoryWindow {
 
     @FXML
     private ListView<?> mealHistoryList;
-
-    @FXML
-    private Button submitMealButton;
 	
 	@FXML
     void initialize() {
 		this.labelNameFXID();
 
+        for (Meal meal : MealStorage.getAllMeals()) {
+            this.mealHistoryList.getItems().add(meal.toString());
+        }
+
     	this.backMealTrackerButton.setOnAction(event -> {
 			((Node) (event.getSource())).getScene().getWindow().hide();
-		});
-
-		this.submitMealButton.setOnAction(event -> {
-			try {
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(Main.class.getResource(Main.MEAL_HISTORY_WINDOW));
-				Parent parent = loader.load();
-				Scene scene = new Scene(parent);
-				Stage addTaskStage = new Stage();
-				addTaskStage.setTitle(Main.MEAL_HISTORY_WINDOW_TITLE);
-				addTaskStage.setScene(scene);
-				addTaskStage.initModality(Modality.APPLICATION_MODAL);
-				addTaskStage.showAndWait();
-			} catch (IOException e) {
-				Alert alert = new Alert(Alert.AlertType.ERROR);
-				alert.setContentText("Unable to launch Meal History Window");
-				alert.showAndWait();
-			}
 		});
 
 	}
@@ -66,7 +49,6 @@ public class MealHistoryWindow {
         assert this.backMealTrackerButton != null : "fx:id=\"backMealTrackerButton\" was not injected: check your FXML file 'MealHistoryWindow.fxml'.";
         assert this.displayMealStatistics != null : "fx:id=\"displayMealStatistics\" was not injected: check your FXML file 'MealHistoryWindow.fxml'.";
         assert this.mealHistoryList != null : "fx:id=\"mealHistoryList\" was not injected: check your FXML file 'MealHistoryWindow.fxml'.";
-        assert this.submitMealButton != null : "fx:id=\"submitMealButton\" was not injected: check your FXML file 'MealHistoryWindow.fxml'.";
 	}
 
 
