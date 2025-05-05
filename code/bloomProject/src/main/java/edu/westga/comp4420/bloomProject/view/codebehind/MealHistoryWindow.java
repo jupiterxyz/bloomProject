@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import edu.westga.comp4420.bloomProject.Meal;
+import edu.westga.comp4420.bloomProject.MealStorage;
 
 /**
  * CodeBehind To Handle Processing for the MealHistoryWindow
@@ -21,7 +23,7 @@ public class MealHistoryWindow {
     private Label displayMealStatistics;
 
     @FXML
-    private ListView<?> mealHistoryList;
+    private ListView<String> mealHistoryList;
 	
 	@FXML
     void initialize() {

@@ -61,4 +61,9 @@ public class Meal {
 		this.calories = calories;
 	}
 
+	@Override
+	public String toString() {
+		return this.name + "Protein: " + this.protein;
+	}
+
 }
