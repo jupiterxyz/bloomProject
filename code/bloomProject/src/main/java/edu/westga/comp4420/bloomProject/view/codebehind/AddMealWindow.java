@@ -154,8 +154,9 @@ public class AddMealWindow {
 				int carbs = this.getCarbs();
 				int calories = this.getCalories();
 
-				Meal newMeal = newMeal(name, protein, fats, carbs, calories);
-				MealStorage.addMeal(newMeal);
+				Meal newMeal = new Meal(name, protein, fats, carbs, calories);
+				MealStorage storage = new MealStorage();
+				storage.addMeal(newMeal);
 				
 				((Node) (event.getSource())).getScene().getWindow().hide();
 			} catch (IOException e) {
