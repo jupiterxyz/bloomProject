@@ -137,7 +137,7 @@ public class AddMealWindowTest {
 
     @Test
     public void testEmptyCarbsInput() {
-        this.window.carb.setText("");
+        this.carb.setText("");
         assertThrows(NumberFormatException.class, () -> this.window.getCarbs());
     }
 
