@@ -7,6 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import edu.westga.comp4420.bloomProject.Meal;
+import edu.westga.comp4420.bloomProject.MealStorage;
 
 /**
  * CodeBehind To Handle Processing for the AddMealWindow
