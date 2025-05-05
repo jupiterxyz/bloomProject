@@ -152,18 +152,19 @@ public class AddMealWindow {
 	private void submitMealButtonHelper() {
 		this.submitMealButton.setOnAction(event -> {
 			try {
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(Main.class.getResource(Main.ADD_MEAL_WINDOW));
-				Parent parent = loader.load();
-				Scene scene = new Scene(parent);
-				Stage addTaskStage = new Stage();
-				addTaskStage.setTitle(Main.ADD_MEAL_WINDOW_TITLE);
-				addTaskStage.setScene(scene);
-				addTaskStage.initModality(Modality.APPLICATION_MODAL);
-				addTaskStage.showAndWait();
+				String name = this.getNameOfMeal();
+				int protein = this.getProtein();
+				int fats = this.getFats();
+				int carbs = this.getCarbs();
+				int calories = this.getCalories();
+
+				Meal newMeal = newMeal(name, protein, fats, carbs, calories);
+				MealStorage.addMeal(newMeal);
+				
+				((Node) (event.getSource())).getScene().getWindow().hide();
 			} catch (IOException e) {
 				Alert alert = new Alert(Alert.AlertType.ERROR);
-				alert.setContentText("Unable to launch Add Meal Window");
+				alert.setContentText("Fill out all fields. Name is letter input and input valid numbers only for protein, fats, carbs, calories");
 				alert.showAndWait();
 			}
 		});
