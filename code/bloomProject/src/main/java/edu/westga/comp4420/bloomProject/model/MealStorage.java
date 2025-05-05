@@ -10,18 +10,18 @@ import java.util.List;
  * @version Spring 2024
  */
 public class MealStorage {
-	private List<Meal> meals;
+	private static List<Meal> meals = new ArrayList<>();
 
-	public MealStorage() {
-		this.meals = new ArrayList<>();
+	// public static MealStorage() {
+	// 	this.meals = new ArrayList<>();
+	// }
+
+	public static void addMeal(Meal meal) {
+		meals.add(meal);
 	}
 
-	public void addMeal(Meal meal) {
-		this.meals.add(meal);
-	}
-
-	public List<Meal> getAllMeals() {
-		return this.meals;
+	public static List<Meal> getAllMeals() {
+		return meals;
 	}
 
 }
