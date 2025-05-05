@@ -66,12 +66,12 @@ public class AddMealWindow {
 		this.nameTextArea.setText(name);
 	}
 
-	public int getProteins() {
+	public int getProtein() {
 		return Integer.parseInt(this.proteinTextArea.getText());
 	}
 
-	public void setProteins(int proteins) {
-		this.proteinTextArea.setText(String.valueOf(proteins));
+	public void setProtein(int proteins) {
+		this.proteinTextArea.setText(String.valueOf(protein));
 	}
 
 	public int getFats() {
