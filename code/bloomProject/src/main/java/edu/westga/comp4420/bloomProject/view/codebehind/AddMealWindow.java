@@ -67,7 +67,7 @@ public class AddMealWindow {
 	}
 
 	public int getCalories() {
-		return Interger.parseInt(this.calorieTextArea.getText());
+		return Integer.parseInt(this.calorieTextArea.getText());
 	}
 
 	public void setCalories(int calories) {
