@@ -161,7 +161,7 @@ public class AddMealWindow {
 				confrimation.setTitle("Meal Submitted");
 				confrimation.setHeaderText(null);
 				confrimation.setContentText("You have successfully submitted your meal");
-				alert.showAndWait();
+				confrimation.showAndWait();
 				
 				((Node) (event.getSource())).getScene().getWindow().hide();
 			} catch (Exception e) {
