@@ -62,7 +62,7 @@ public class AddMealWindow {
 		return this.nameTextArea.getText();
 	}
 
-	public void setNameOfMeal(String name){
+	public void setNameOfMeal(String name) {
 		this.nameTextArea.setText(name);
 	}
 
@@ -70,7 +70,7 @@ public class AddMealWindow {
 		return this.calorieTextArea.getText();
 	}
 
-	public void setCalories(int calories){
+	public void setCalories(int calories) {
 		return this.calorieTextArea.setText(String.valueOf(calories));
 	}
 	
@@ -79,8 +79,8 @@ public class AddMealWindow {
 		this.labelNameFXID();
 
 		this.calorieTextArea.textProperty().addListener((observableValue, oldValue, newValue) -> {
-			if (!newValue.matches("\\d*")){
-				this.calorieTextArea.setText(newValue.replaceAll("[^\\d]",""));
+			if (!newValue.matches("\\d*")) {
+				this.calorieTextArea.setText(newValue.replaceAll("[^\\d]", ""));
 			}
 		});
 
