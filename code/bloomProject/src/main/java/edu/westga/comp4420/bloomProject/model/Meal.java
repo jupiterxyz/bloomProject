@@ -13,6 +13,8 @@ public class Meal {
 	private int carbs;
 	private int calories;
 
+	private static final String GRAMS = " grams";
+
 	public Meal(String name, int protein, int fats, int carbs, int calories) {
 		this.name = name;
 		this.protein = protein;
@@ -63,7 +65,7 @@ public class Meal {
 
 	@Override
 	public String toString() {
-		return this.name  + " Protein: " + this.protein + " grams" + " Fats: " + this.fats + " grams" + " Carbs: " + this.carbs + " grams" + " Calories: " + this.calories + " grams";
+		return this.name  + " Protein: " + this.protein + GRAMS + " Fats: " + this.fats + GRAMS + " Carbs: " + this.carbs + GRAMS + " Calories: " + this.calories + GRAMS;
 	}
 
 }
