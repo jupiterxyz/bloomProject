@@ -53,6 +53,18 @@ public class AddMealWindow {
     @FXML
     private Button submitMealButton;
 
+	public AddMealWindow() {
+		
+	}
+
+	public AddMealWindow(TextField name, TextField protein, TextField fats, TextField carbs, TextField calories) {
+		this.nameTextArea = name;
+        this.proteinTextArea = protein;
+        this.fatTextArea = fats;
+        this.carbTextArea = carbs;
+        this.calorieTextArea = calories;
+    }
+	
 	public String getNameOfMeal() {
 		return this.nameTextArea.getText();
 	}

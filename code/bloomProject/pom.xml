@@ -5,7 +5,7 @@
 
 	<!-- project info -->
 	<groupId>edu.westga</groupId>
-	<artifactId>bllomProject-App</artifactId>
+	<artifactId>bloomProject-App</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
 	<properties>

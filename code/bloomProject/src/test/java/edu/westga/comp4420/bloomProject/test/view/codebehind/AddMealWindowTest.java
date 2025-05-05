@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import javafx.embed.swing.JFXPanel;
 import javafx.scene.control.TextField;
 
 /**
@@ -18,21 +16,25 @@ import javafx.scene.control.TextField;
 public class AddMealWindowTest {
 
     private AddMealWindow window;
+    private TextField name;
+    private TextField protein;
+    private TextField fat;
+    private TextField carb;
+    private TextField calorie;
 
     @BeforeEach
     public void setUp() {
-        new JFXPanel(); // Initializes JavaFX toolkit
 
-        this.window = new AddMealWindow();
-
-        this.window.nameTextArea = new TextField();
-        this.window.proteinTextArea = new TextField();
-        this.window.fatTextArea = new TextField();
-        this.window.carbTextArea = new TextField();
-        this.window.calorieTextArea = new TextField();
+       this.name = new TextField();
+       this.protein = new TextField();
+       this.fat = new TextField();
+       this.carb = new TextField();
+       this.calorie = new TextField();
+       
+       this.window = new AddMealWindow(this.name, this.protein, this.fat, this.carb, this.calorie);
     }
 
-    // Name tests
+  
     @Test
     public void testValidNameOfMeal() {
         this.window.setNameOfMeal("Salad");
@@ -40,21 +42,21 @@ public class AddMealWindowTest {
     }
 
     @Test
-    public void testEmptyNameThrowsException() {
+    public void testEmptyName() {
         assertThrows(IllegalArgumentException.class, () -> {
             this.window.setNameOfMeal("");
         });
     }
 
     @Test
-    public void testNullNameThrowsException() {
+    public void testNullName() {
         assertThrows(IllegalArgumentException.class, () -> {
             this.window.setNameOfMeal(null);
         });
     }
 
     @Test
-    public void testWhitespaceNameThrowsException() {
+    public void testWhitespaceName() {
         assertThrows(IllegalArgumentException.class, () -> {
             this.window.setNameOfMeal("   ");
         });
@@ -68,19 +70,21 @@ public class AddMealWindowTest {
     }
 
     @Test
-    public void testInvalidProteinInputThrowsException() {
+    public void testInvalidProteinInput() {
         this.window.proteinTextArea.setText("apples");
         assertThrows(NumberFormatException.class, () -> this.window.getProtein());
     }
 
     @Test
-    public void testEmptyProteinInputThrowsException() {
+    public void testEmptyProteinInput() {
+
+
         this.window.proteinTextArea.setText("");
         assertThrows(NumberFormatException.class, () -> this.window.getProtein());
     }
 
     @Test
-    public void testNegativeProteinThrowsException() {
+    public void testNegativeProtein() {
         assertThrows(IllegalArgumentException.class, () -> this.window.setProtein(-1));
     }
 
@@ -98,19 +102,19 @@ public class AddMealWindowTest {
     }
 
     @Test
-    public void testInvalidFatsInputThrowsException() {
+    public void testInvalidFatsInput() {
         this.window.fatTextArea.setText("apples");
         assertThrows(NumberFormatException.class, () -> this.window.getFats());
     }
 
     @Test
-    public void testEmptyFatsInputThrowsException() {
+    public void testEmptyFatsInput() {
         this.window.fatTextArea.setText("");
         assertThrows(NumberFormatException.class, () -> this.window.getFats());
     }
 
     @Test
-    public void testNegativeFatsThrowsException() {
+    public void testNegativeFats() {
         assertThrows(IllegalArgumentException.class, () -> this.window.setFats(-1));
     }
 
@@ -128,19 +132,19 @@ public class AddMealWindowTest {
     }
 
     @Test
-    public void testInvalidCarbsInputThrowsException() {
+    public void testInvalidCarbsInput() {
         this.window.carbTextArea.setText("apples");
         assertThrows(NumberFormatException.class, () -> this.window.getCarbs());
     }
 
     @Test
-    public void testEmptyCarbsInputThrowsException() {
+    public void testEmptyCarbsInput() {
         this.window.carbTextArea.setText("");
         assertThrows(NumberFormatException.class, () -> this.window.getCarbs());
     }
 
     @Test
-    public void testNegativeCarbsThrowsException() {
+    public void testNegativeCarbs() {
         assertThrows(IllegalArgumentException.class, () -> this.window.setCarbs(-1));
     }
 
@@ -158,20 +162,20 @@ public class AddMealWindowTest {
     }
 
     @Test
-    public void testInvalidCaloriesInputThrowsException() {
-        this.window.calorieTextArea.setText("apples");
+    public void testInvalidCaloriesInput() {
+        this.window.calorieTextArea.setText("carrots");
         assertThrows(NumberFormatException.class, () -> this.window.getCalories());
     }
 
     @Test
-    public void testEmptyCaloriesInputThrowsException() {
+    public void testEmptyCaloriesInput() {
         this.window.calorieTextArea.setText("");
         assertThrows(NumberFormatException.class, () -> this.window.getCalories());
     }
 
     @Test
-    public void testNegativeCaloriesThrowsException() {
-        assertThrows(IllegalArgumentException.class, () -> this.window.setCalories(-1));
+    public void testNegativeCalories() {
+        assertThrows(IllegalArgumentException.class, () -> this.window.setCalories(-10));
     }
 
     @Test
