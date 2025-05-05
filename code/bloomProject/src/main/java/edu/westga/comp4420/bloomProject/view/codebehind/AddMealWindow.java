@@ -66,6 +66,30 @@ public class AddMealWindow {
 		this.nameTextArea.setText(name);
 	}
 
+	public int getProteins() {
+		return Integer.parseInt(this.proteinTextArea.getText());
+	}
+
+	public void setProteins(int proteins) {
+		this.proteinTextArea.setText(String.valueOf(proteins));
+	}
+
+	public int getFats() {
+		return Integer.parseInt(this.fatTextArea.getText());
+	}
+
+	public void setFats(int fats) {
+		this.fatTextArea.setText(String.valueOf(fats));
+	}
+
+	public int getCarbs() {
+		return Integer.parseInt(this.carbTextArea.getText());
+	}
+
+	public void setCarbs(int carbs) {
+		this.carbTextArea.setText(String.valueOf(carbs));
+	}
+
 	public int getCalories() {
 		return Integer.parseInt(this.calorieTextArea.getText());
 	}
@@ -77,6 +101,24 @@ public class AddMealWindow {
 	@FXML
     void initialize() {
 		this.labelNameFXID();
+
+		this.proteinTextArea.textProperty().addListener((observableValue, oldValue, newValue) -> {
+			if (!newValue.matches("\\d*")) {
+				this.proteinTextArea.setText(newValue.replaceAll("[^\\d]", ""));
+			}
+		});
+
+		this.fatTextArea.textProperty().addListener((observableValue, oldValue, newValue) -> {
+			if (!newValue.matches("\\d*")) {
+				this.fatTextArea.setText(newValue.replaceAll("[^\\d]", ""));
+			}
+		});
+
+		this.carbTextArea.textProperty().addListener((observableValue, oldValue, newValue) -> {
+			if (!newValue.matches("\\d*")) {
+				this.carbTextArea.setText(newValue.replaceAll("[^\\d]", ""));
+			}
+		});
 
 		this.calorieTextArea.textProperty().addListener((observableValue, oldValue, newValue) -> {
 			if (!newValue.matches("\\d*")) {
