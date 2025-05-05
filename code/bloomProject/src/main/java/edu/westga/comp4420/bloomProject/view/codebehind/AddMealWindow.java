@@ -70,7 +70,7 @@ public class AddMealWindow {
 		return Integer.parseInt(this.proteinTextArea.getText());
 	}
 
-	public void setProtein(int proteins) {
+	public void setProtein(int protein) {
 		this.proteinTextArea.setText(String.valueOf(protein));
 	}
 
