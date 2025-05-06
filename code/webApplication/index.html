@@ -1,124 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home - bloomProject</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css"/>
-</head>
-<body>
-  <!-- Navbar with Button Group -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="index.html">bloomProject</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarContent">
-      </div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/11.6.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/11.6.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.6.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/11.6.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/11.6.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/11.6.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/11.6.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/11.6.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/11.6.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/11.6.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-  </nav>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-  <!-- Hero Section -->
-  <div class="container my-5">
-    <div class="row align-items-center">
-      <!-- Left Column: Text -->
-      <div class="col-md-6 order-md-1">
-		 <div class="name-of-page">  
-        <button class="btn btn-danger mb-3">Your Jounery</button>
-			 <h1 class="section-title">Welcome to Exploring Your New Lifestyle</h1>
-		  	</div>
-		  <p>This is a web-based system that will support users who value creativity in tracking their workouts through photography and videography;
-			  and participating in upcoming fitness-related trends, activities, competitions, challenges, and races whether in person, virtually, locally, or globally.
-			  It will also support users with sourcing alternate creative and fun activities that don't involve the gym that is fitness-related.
-			  The users will be able to participate in community discussions that foster engagement, connections, and motivation. </p>  
-		  <p> Please select the download button to download our app</p>
-        <br>
-		  <div class="registraion-access">
-		<a href="pages/signin.html" button class="btn btn-primary me-2">Download</a>
-		<a class="nav-link" href="/api/download_history" download>Download Number Checker History</a>
-		</div>
-		  	  
-      </div>
-      <!-- Right Column: Image -->
-      <div class="col-md-6 text-center order-md-2">
-        <img src="images/workingout.jpg" alt="Group of women working out" class="img-fluid rounded" />
-      </div>
-    </div>
-	  		    <!-- test: footer -->
-   <div class="test-footer">
-    <h5>Welcom to Our Team</h5>
-    <p>This site is designed by Jupiter Lebrun</p>
-  </div>
-	  
-  </div>
-	
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-  <!-- Toggle Color Button -->
-  <button class="btn btn-secondary color-toggle" onclick="toggleColor()">Toggle Color</button>
-
-  <!-- Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Sign In</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label class="form-label">Email address</label>
-              <input type="email" class="form-control" placeholder="name@example.com" required />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Password</label>
-              <input type="password" class="form-control" required />
-            </div>
-            <button type="submit" class="btn btn-primary">Sign In</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Register Modal -->
-  <div class="modal fade" id="registerModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Register</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label class="form-label">Email address</label>
-              <input type="email" class="form-control" placeholder="name@example.com" required />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Password</label>
-              <input type="password" class="form-control" required />
-            </div>
-            <button type="submit" class="btn btn-primary">Register</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function toggleColor() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
-</body>
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
