@@ -72,18 +72,21 @@ public class AddMealWindowTest {
     @Test
     public void testInvalidProteinInput() {
         this.protein.setText("apples");
-        assertThrows(NumberFormatException.class, () -> this.window.getProtein());
+        assertThrows(NumberFormatException.class, () -> 
+        this.window.getProtein());
     }
 
     @Test
     public void testEmptyProteinInput() {
         this.protein.setText("");
-        assertThrows(NumberFormatException.class, () -> this.window.getProtein());
+        assertThrows(NumberFormatException.class, () -> 
+        this.window.getProtein());
     }
 
     @Test
     public void testNegativeProtein() {
-        assertThrows(IllegalArgumentException.class, () -> this.window.setProtein(-1));
+        assertThrows(IllegalArgumentException.class, () -> 
+        this.window.setProtein(-1));
     }
 
     @Test
@@ -102,18 +105,21 @@ public class AddMealWindowTest {
     @Test
     public void testInvalidFatsInput() {
         this.fat.setText("apples");
-        assertThrows(NumberFormatException.class, () -> this.window.getFats());
+        assertThrows(NumberFormatException.class, () -> 
+        this.window.getFats());
     }
 
     @Test
     public void testEmptyFatsInput() {
         this.fat.setText("");
-        assertThrows(NumberFormatException.class, () -> this.window.getFats());
+        assertThrows(NumberFormatException.class, () -> 
+        this.window.getFats());
     }
 
     @Test
     public void testNegativeFats() {
-        assertThrows(IllegalArgumentException.class, () -> this.window.setFats(-1));
+        assertThrows(IllegalArgumentException.class, () -> 
+        this.window.setFats(-1));
     }
 
     @Test
@@ -131,19 +137,22 @@ public class AddMealWindowTest {
 
     @Test
     public void testInvalidCarbsInput() {
-        this.carb.setText("apples");
-        assertThrows(NumberFormatException.class, () -> this.window.getCarbs());
+        this.carb.setText("cookies");
+        assertThrows(NumberFormatException.class, () -> 
+        this.window.getCarbs());
     }
 
     @Test
     public void testEmptyCarbsInput() {
         this.carb.setText("");
-        assertThrows(NumberFormatException.class, () -> this.window.getCarbs());
+        assertThrows(NumberFormatException.class, () -> 
+        this.window.getCarbs());
     }
 
     @Test
     public void testNegativeCarbs() {
-        assertThrows(IllegalArgumentException.class, () -> this.window.setCarbs(-1));
+        assertThrows(IllegalArgumentException.class, () -> 
+        this.window.setCarbs(-1));
     }
 
     @Test
@@ -162,18 +171,21 @@ public class AddMealWindowTest {
     @Test
     public void testInvalidCaloriesInput() {
         this.calorie.setText("carrots");
-        assertThrows(NumberFormatException.class, () -> this.window.getCalories());
+        assertThrows(NumberFormatException.class, () -> 
+        this.window.getCalories());
     }
 
     @Test
     public void testEmptyCaloriesInput() {
         this.calorie.setText("");
-        assertThrows(NumberFormatException.class, () -> this.window.getCalories());
+        assertThrows(NumberFormatException.class, () -> 
+        this.window.getCalories());
     }
 
     @Test
     public void testNegativeCalories() {
-        assertThrows(IllegalArgumentException.class, () -> this.window.setCalories(-10));
+        assertThrows(IllegalArgumentException.class, () -> 
+        this.window.setCalories(-10));
     }
 
     @Test
